@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.static v8.0.1 | MIT License | github.com/necolas/normalize.static */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
@@ -425,6 +425,19 @@ textarea {
 	transition: all 0.5s linear
 }
 
+
+.item__view-btn {
+	padding: 0;
+	padding-top: 0px;
+	border: none;
+	outline: none;
+	background: none;
+	box-shadow: none;
+	opacity: 1;
+	-webkit-transition: all 0.5s linear;
+	transition: all 0.5s linear
+}
+
 .item__bookmark-btn.active,
 .item__bookmark-btn:hover {
 	opacity: 1
@@ -505,4 +518,4 @@ textarea {
 }
 
 
-/*# sourceMappingURL=styles.min.css.map */
+/*# sourceMappingURL=styles.min.static.map */
