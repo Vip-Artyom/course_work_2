@@ -7,7 +7,14 @@
   <title>SKYPROGRAM</title>
   <link href="../static/styles.min.css" rel="stylesheet">
 </head>
-
+<div class="container">
+<div class="search">
+<form action="/search" method="get" class="search__form">
+  <input type="text" name="s">
+  <input type="submit" value="Search" class="button" class="search__input">
+</form>
+</div>
+</div>
 <body>
   <header class="container header">
     <div class="header__wrapper">
@@ -27,14 +34,14 @@
       {% for post in posts %}
       <div class="items__item item">
         <div class="item__top">
-          <a href="/templates/user-feed.html" class="item__head">
+          <a href="/users/{{post.poster_name}}" class="item__head">
             <div class="item__ava-wrap">
               <img src="{{post.poster_avatar}}" alt="" class="item__ava" width="47">
             </div>
             <span class="item__username">{{post.poster_name}}</span>
           </a>
         </div>
-        <a href="/templates/post.html" class="item__post-link">
+        <a href="/posts/{{ post.pk }}" class="item__post-link">
           <img src="{{ post.pic }}" alt="" width="348" class="item__post-img">
         </a>
         <p class="item__descr">{{ post.content[:50] }}...</p>
@@ -45,7 +52,7 @@
           </div>
         </div>
         <div class="item__post-bottom">
-        <a href="templates/post.html" class="item__comments-counter">{{ post.comments_count }} комментария</a>
+        <a href="/posts/{{ post.pk }}" class="item__comments-counter">{{ post.comments_count }} комментария</a>
 
           <button type="button" class="item__view-btn">
             <div class="item__post-info">
@@ -57,7 +64,7 @@
           </button>
         </div>
         <div class="item__post-bottom">
-          <a href="templates/post.html" class="item__btn-more">Подробнее</a>
+          <a href="/posts/{{ post.pk }}" class="item__btn-more">Подробнее</a>
           <button type="button" class="item__bookmark-btn">
             <img src="../static/img/bookmark.png" alt="" class="item__bookmark-icon" width="24">
           </button>

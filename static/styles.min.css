@@ -387,11 +387,12 @@ textarea {
 }
 
 .item__counter-text {
-	padding-left: 11px;
+	padding-left: 1px;
 	color: rgba(0, 0, 0, 0.45)
 }
 
 .item__comments-counter {
+
 	color: rgba(0, 0, 0, 0.45)
 }
 

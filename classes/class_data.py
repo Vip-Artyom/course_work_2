@@ -1,20 +1,19 @@
 import json  # импортируем json
 
-Data_Path = "data/data.json"
-Comments_Path = "data/comments.json"
+
 
 # Создаем класс с данными
 class Data:
 
     def get_load_comments(self):
         """возвращает все комментарии"""
-        with open(Comments_Path, "r", encoding="utf-8") as file:
+        with open("data/comments.json", "r", encoding="utf-8") as file:
             comments_data = json.load(file)
         return comments_data
 
     def get_load_posts(self):
         """возвращает все посты"""
-        with open(Data_Path, "r", encoding="utf-8") as file:
+        with open("data/data.json", "r", encoding="utf-8") as file:
             posts_data = json.load(file)
         return posts_data
 
