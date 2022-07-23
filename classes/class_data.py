@@ -1,7 +1,6 @@
 import json  # импортируем json
 
 
-
 # Создаем класс с данными
 class Data:
 
@@ -71,4 +70,3 @@ class Data:
             if post['pk'] == pk:
                 find_post = post
         return find_post
-

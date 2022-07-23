@@ -52,6 +52,5 @@ def get_post_id_json(post_id):
     return jsonify(data.get_post_by_pk(post_id))
 
 
-
 if __name__ == "__main__":
     app.run(debug=True)
